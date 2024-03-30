@@ -4,12 +4,15 @@
   "description": "A user management serive",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/server.js"
+    "dev": "node src/server.js",
+    "format:check": "prettier . --check",
+    "format:fix": "prettier . --write"
   },
   "author": "Deepak",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.2",
+    "prettier": "3.2.5",
     "typescript": "^5.4.3"
   }
 }
