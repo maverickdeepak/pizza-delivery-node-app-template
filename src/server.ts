@@ -9,9 +9,12 @@ const startServer = () => {
             logger.info(`Server is running on port ${port}`);
         });
     } catch (error) {
-        if (error instanceof Error)
-            logger.error("Error while starting the server", error.message);
-        process.exit(1);
+        if (error instanceof Error) {
+            logger.error(error.message);
+            setTimeout(() => {
+                process.exit(1);
+            }, 1000);
+        }
     }
 };
 
